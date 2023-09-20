@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Dropdown from './Dropdown';
+// import yaml from 'yamljs';
+// import fs from  'fs-extra';
 
 import { Link } from 'react-router-dom';
 
@@ -58,13 +60,11 @@ const MenuItems = ({ items, depthLevel }) => {
     var file = e.target.files[0];
     console.log('actionClick:' + items.action);
     console.log(file);
-    // var inputfile = 'input.yml',
-    // outputfile = 'output.json',
-    // yaml = require('js-yaml'),
-    // fs = require('fs'),
-    // obj = yaml.load(fs.readFileSync(inputfile, {encoding: 'utf-8'}));
-    var jsonString = JSON.stringify(file);
-    console.log('JSON:' + jsonString);
+
+    // var obj = yaml.load(fs.readFileSync(file, {encoding: 'utf-8'}));
+    // console.log('JSON:' + obj);
+    // var jsonString = JSON.stringify(file);
+    // console.log('JSON:' + jsonString);
     // const files = e.target.files;
     // console.log('handleFileChange');
     // if (files.length > 0) {
