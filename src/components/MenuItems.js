@@ -3,6 +3,7 @@ import Dropdown from './Dropdown';
 
 import { Link } from 'react-router-dom';
 
+
 const MenuItems = ({ items, depthLevel }) => {
   const [dropdown, setDropdown] = useState(false);
   const inputRef = useRef(null);
@@ -57,6 +58,13 @@ const MenuItems = ({ items, depthLevel }) => {
     var file = e.target.files[0];
     console.log('actionClick:' + items.action);
     console.log(file);
+    // var inputfile = 'input.yml',
+    // outputfile = 'output.json',
+    // yaml = require('js-yaml'),
+    // fs = require('fs'),
+    // obj = yaml.load(fs.readFileSync(inputfile, {encoding: 'utf-8'}));
+    var jsonString = JSON.stringify(file);
+    console.log('JSON:' + jsonString);
     // const files = e.target.files;
     // console.log('handleFileChange');
     // if (files.length > 0) {
